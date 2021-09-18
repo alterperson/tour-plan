@@ -504,7 +504,7 @@ template {
 }
 
 .hotel {
-  padding-top: 23px;
+  padding-top: 16px;
   padding-bottom: 70px;
 }
 
@@ -522,16 +522,21 @@ template {
 
 .hotel-info__offer {
   margin-left: 14px;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 
 .hotel-info__name {
-  margin-top: 4px;
+  margin-top: 1px;
   margin-bottom: 0;
 }
 
 .hotel-info__description {
   margin: 0;
+}
+
+.hotel-info__rating {
+  margin-top: 5px;
+  padding-top: 2px;
 }
 
 .hotel-name {
@@ -563,7 +568,7 @@ template {
 }
 
 .offer {
-  padding: 4px 9px;
+  padding: 3px 10px;
   font-weight: 600;
   font-size: 10px;
   line-height: 13px;
@@ -590,6 +595,10 @@ template {
   font-weight: 600;
   font-size: 14px;
   line-height: 18px;
+}
+
+.rating__out {
+  font-size: 10px;
 }
 
 @media (max-width: 1280px) {
