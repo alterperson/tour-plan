@@ -523,11 +523,11 @@ template {
 
 .hotel-info__offer {
   margin-left: 14px;
-  margin-top: 2px;
+  margin-top: 6px;
 }
 
 .hotel-info__name {
-  margin-top: 1px;
+  margin-top: 4px;
   margin-bottom: 0;
 }
 
@@ -564,12 +564,22 @@ template {
 }
 
 .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  padding-left: 1px;
+  padding-top: 7px;
+}
+
+.stars__item {
+  margin-right: 2px;
 }
 
 .offer {
   padding: 3px 10px;
+  padding-bottom: 4px;
   font-weight: 600;
   font-size: 10px;
   line-height: 13px;
