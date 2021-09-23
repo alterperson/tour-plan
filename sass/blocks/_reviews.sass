@@ -14,7 +14,7 @@
       display: flex
       flex-direction: column
       align-items: center
-      width: 730px
+      max-width: 730px
       padding: 0 95px 30px 99px
       margin: 45px auto 0 auto
       background-color: #ffffff
@@ -39,7 +39,6 @@
         background-repeat: no-repeat
     &__button
       position: absolute
-      top: 50%
       width: 30px
       height: 30px
       z-index: 99
@@ -48,15 +47,14 @@
       background-size: 10px
       background-position: center
       border: none
-      transform: translateY(50%)
       cursor: pointer
       &--prev
         left: 18px
-        top: 119px
+        top: 134px
         background-image: url(../images/arrow-prev-secondary.svg)
       &--next
         right: 18px
-        top: 119px
+        top: 134px
         background-image: url(../images/arrow-next-secondary.svg)
     &__profile
       z-index: 99
