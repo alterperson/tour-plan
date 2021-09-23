@@ -1042,6 +1042,7 @@ template {
 }
 
 .reviews-slider__text {
+  z-index: 99;
   max-width: 537px;
   margin: auto;
   font-size: 12px;
