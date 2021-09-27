@@ -14,12 +14,9 @@
     width: 230px
     height: 230px
   .item
-    &__picture
-      &--popular
-        min-width: 315px
     &__info
       &--popular
-        padding: 15px 19px 0px 20px
+        padding: 30px 19px 0px 20px
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -95,9 +92,6 @@
     &-list
       grid-template-columns: 1fr 1fr
   .item
-    &__picture
-      &--popular
-        min-width: 366px
     &__info
       &--popular
         padding: 35px 19px 0px 20px
@@ -192,10 +186,12 @@
       font-size: 12px
       line-height: 15px
     &__picture
-      max-width: 100%
+      width: 100%
       &--popular
-        min-width: 100%
-        max-height: 250px
+        height: 250px
+    &__info
+      &--popular
+        width: 100%
     &__stars
       display: none
     &__description
@@ -271,7 +267,7 @@
       font-size: 18px
   .item
     &__picture
-      max-height: 195px
+      height: 195px
     &__info
       &--popular
         padding: 25px 20px 0 30px
