@@ -1533,6 +1533,7 @@ template {
   background-color: #ffffff;
   border: none;
   border-radius: 4px;
+  resize: none;
 }
 
 .footer__button {
