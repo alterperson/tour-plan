@@ -157,14 +157,59 @@
   .pay-systems
     margin-left: auto
 @media (max-width: 768px)
+  body
+    padding-top: 78px
   .container
     max-width: 576px
   .navbar
-    &__search, &-menu, &__user
-      display: none
     &-top
       &__menu-button
         display: flex
+    &--mobile
+      position: fixed
+      left: 0
+      top: 0
+      right: 0
+      z-index: 99
+    &__search, &__user
+      &--mobile
+        &-hidden
+          display: none
+        &-visible
+          display: flex
+    &__search
+      margin-left: 0
+    &__user
+      flex-direction: column
+      justify-content: center
+    &-menu
+      display: none
+      position: fixed
+      left: 0
+      top: 70px
+      right: 0
+      bottom: 0
+      padding-top: 13px
+      &--active
+        display: block
+      &__list
+        flex-direction: column
+      &__item
+        margin-bottom: 17px
+        &--mobile
+          &-visible
+            display: block
+      &__user
+        margin-bottom: 27px
+      &__search
+        width: 246px
+        margin-bottom: 36px
+  .user
+    &__name
+      &--light
+        margin-left: 0
+        margin-top: 10px
+        color: $light
   .menu-button
     display: flex
     justify-content: space-between

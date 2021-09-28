@@ -26,3 +26,8 @@ const reviewsSlider = new Swiper(".reviews-slider", {
     prevEl: ".reviews-slider__button--prev",
   },
 });
+
+var menuButton = document.querySelector(".menu-button");
+menuButton.addEventListener("click", () => {
+  document.querySelector(".navbar-menu").classList.toggle("navbar-menu--active");
+});
