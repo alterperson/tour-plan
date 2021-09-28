@@ -17,6 +17,9 @@
     &__info
       &--popular
         padding: 30px 19px 0px 20px
+  .footer
+    &__input
+      max-width: 100%
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -80,7 +83,7 @@
       margin-bottom: 46px
       font-size: 30px
   .activities
-    padding: 30px 0 98px 0
+    padding: 30px 0 50px 0
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -95,6 +98,64 @@
     &__info
       &--popular
         padding: 35px 19px 0px 20px
+  .footer
+    padding: 72px 0 46px 0
+    &-wrapper
+      grid-template-columns: repeat(12, 1fr)
+      row-gap: 30px
+    &__logo
+      grid-row: 1 / 2
+      grid-column: span 3
+      width: 96px
+      margin-top: 0
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 9
+        align-self: center
+        margin: 11px 0 0 7px
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 3
+      margin-top: 20px
+    &__additional
+      grid-column: span 5
+      margin-left: 21px
+      margin-top: 20px
+    &__legal
+      grid-column: span 4
+      margin-right: 11px
+      margin-top: 20px
+    &__contact
+      &-details
+        grid-column: span 10
+        grid-row: 3
+        margin-top: 31px
+      &-form
+        grid-column: span 12
+        grid-row: 4
+        margin-left: 1px
+        margin-top: 8px
+    &__form
+      max-width: 538px
+    &__input
+      max-width: 255px
+    &__info
+      grid-column: span 12
+      justify-content: flex-start
+      padding-top: 28px
+    &-info
+      &__list
+        padding: 0
+        margin: 0
+      &__item
+        margin-left: 0
+        margin-right: 13px
+  .contact-details
+    &__ul
+      margin-left: 7px
+  .pay-systems
+    margin-left: auto
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -258,7 +319,7 @@
       font-size: 18px
       line-height: 24px
   .activities
-    padding: 8px 0 98px 0
+    padding: 8px 0 40px 0
     &__card
       &:nth-child(2)
         margin-bottom: 28px
@@ -275,3 +336,85 @@
       flex-wrap: wrap
     &__book
       width: 100%
+  .footer
+    padding: 68px 0 46px 0
+    &-wrapper
+      grid-template-columns: 1fr
+      row-gap: 20px
+    &__logo
+      grid-column: 1
+      grid-row: 1
+      width: 96px
+    &__ul
+      margin-left: 1px
+    &__social
+      &-network
+        grid-column: 1
+        grid-row: 2
+        flex-wrap: wrap
+        margin: 22px 0 0 0
+    &__title
+      &--inline
+        width: 100%
+        margin: 0 0 22px 0
+    &__legal
+      grid-column: 1
+      grid-row: 3
+      justify-self: self-start
+      margin-top: 7px
+    &__additional
+      grid-column: 1
+      grid-row: 4
+      margin-left: 0
+      margin-top: 9px
+    &__categories
+      grid-column: 1
+      grid-row: 5
+      margin-top: 7px
+    &__contact
+      &-details
+        grid-column: 1
+        grid-row: 6
+        margin-top: 21px
+      &-form
+        grid-column: 1
+        grid-row: 7
+    &__icon
+      &-wrapper
+        min-width: 29px
+    &__info
+      grid-column: 1
+      grid-row: 8
+      flex-wrap: wrap
+    &__contact
+      &-form
+        margin-left: 0px
+        margin-top: 20px
+    &__form
+      max-width: 100%
+    &__input
+      max-width: 100%
+    &__message
+      margin-bottom: 15px
+    &__require
+      order: 1
+      width: 100%
+      margin-bottom: 15px
+    &__button
+      order: 2
+    &__info
+      padding-top: 6px
+    &-info
+      &__list
+        margin-bottom: 10px
+      &__item
+        margin: 0
+        &:not(:last-child)
+          margin-right: 10px
+  .contact
+    &-form
+      &__title
+        margin-bottom: 14px
+  .pay-systems
+    margin-left: 0
+    margin-right: auto
