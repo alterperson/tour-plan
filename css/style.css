@@ -1642,13 +1642,13 @@ template {
   position: fixed;
   left: 50%;
   top: 50%;
-  margin-top: -2px;
+  margin-top: -6px;
   max-width: 478px;
-  padding: 33px 88px;
+  padding: 33px 87px 35px 89px;
   color: #ffffff;
   background-color: #0a223d;
-  -webkit-transform: translate(-50%, -60%);
-          transform: translate(-50%, -60%);
+  -webkit-transform: translate(-50%, -59%);
+          transform: translate(-50%, -59%);
   border-radius: 8px;
   z-index: 101;
   visibility: hidden;
@@ -1680,6 +1680,20 @@ template {
   text-transform: uppercase;
 }
 
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .modal__input {
   width: 100%;
   margin-bottom: 15px;
@@ -1688,7 +1702,7 @@ template {
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .modal__button {
@@ -1921,11 +1935,15 @@ template {
     margin-left: auto;
   }
   .modal__button {
-    display: block;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     width: 100%;
+    margin-top: 10px;
+    margin-right: 0;
   }
   .modal__require {
-    display: block;
+    width: 100%;
   }
 }
 
