@@ -15,7 +15,7 @@
     <header class="navbar navbar--mobile">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="#" class="logo navbar__logo">
             <img src="images/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image" />
           </a>
           <!-- /.logo -->
@@ -191,7 +191,7 @@
                 </a>
               </div>
               <!-- /.booking__call-center -->
-              <button class="button booking__button">View Other Options</button>
+              <button data-toggle="modal" data-href="#booking-modal" class="button booking__button">View Other Options</button>
             </div>
             <!-- /.booking -->
             <div class="map">
@@ -675,15 +675,8 @@
             <h3 class="footer__title footer__title--mb-3 contact-form__title">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form">
               <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required />
-              <input
-                type="tel"
-                class="input footer__input"
-                placeholder="Phone Number* ( +7(900)123-45-67 )"
-                name="phone"
-                required
-                pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
-              />
-              <textarea cols="30" rows="10" class="footer__message" placeholder="Message" name="message"></textarea>
+              <input type="tel" class="input footer__input" placeholder="Phone Number*" name="phone" required pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" />
+              <textarea cols="30" rows="10" class="message footer__message" placeholder="Message" name="message"></textarea>
               <button class="button footer__button">Send</button>
               <span class="footer__require">* Required Fields</span>
             </form>
@@ -708,6 +701,25 @@
       </div>
       <!-- /.container -->
     </footer>
+    <div class="modal" id="booking-modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <button class="modal__close">
+          <img src="images/close.svg" alt="icon: close" />
+        </button>
+        <h2 class="modal__title modal__title--mb-3 contact-form__title">Booking</h2>
+        <form action="send.php" method="POST" class="modal__form">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required />
+          <input type="tel" class="input modal__input" placeholder="Phone Number*" name="phone" required pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" />
+          <input type="email" class="input modal__input" placeholder="Email*" name="email" required />
+          <textarea cols="30" rows="5" class="message modal__message" placeholder="Message" name="message"></textarea>
+          <button class="button modal__button">Send</button>
+          <span class="modal__require">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/parallax.min.js"></script>
