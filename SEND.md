@@ -2,7 +2,7 @@
 
 Для отправки писем через формы в проекте нужно создать файл send.php
 
-<?php
+```<?php
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
@@ -59,4 +59,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-header('Location: thankyou.html');
+header('Location: thankyou.html');```
