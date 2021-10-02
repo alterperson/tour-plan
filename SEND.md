@@ -1,3 +1,7 @@
+## Примечание
+
+Для отправки писем через формы в проекте нужно создать файл send.php
+
 <?php
 // Файлы phpmailer
 require 'phpmailer/PHPMailer.php';
@@ -31,14 +35,14 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'vadmelnichuk@gmail.com'; // Логин на почте
-    $mail->Password   = 'owrnmxrujvgsbkjj'; // Пароль на почте
+    $mail->Username   = 'xxx@xxx'; // Логин на почте
+    $mail->Password   = 'xxx'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('vadmelnichuk@gmail.com', 'Вадим Мельничук'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('xxx@xxx', 'xxx'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('vad-mk@yandex.ru');
+    $mail->addAddress('xxx@xxx');
 
 // Отправка сообщения
 $mail->isHTML(true);
