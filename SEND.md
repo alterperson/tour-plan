@@ -35,11 +35,7 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-<<<<<<< HEAD:SEND.md
     $mail->Username   = 'xxx@xxx'; // Логин на почте
-=======
-    $mail->Username   = 'xxx'; // Логин на почте
->>>>>>> 2d1c81597421b8fc097829fa4764f4c23258d222:send.php
     $mail->Password   = 'xxx'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
