@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Code for slider
   const hotelSlider = new Swiper(".hotel-slider", {
     // Optional parameters
     loop: true,
@@ -28,6 +29,7 @@ $(document).ready(function () {
     },
   });
 
+  //Code for menu-mobile
   var menuButton = $(".menu-button");
   menuButton.on("click", () => {
     $(".navbar-menu").toggleClass("navbar-menu--active");
@@ -38,6 +40,7 @@ $(document).ready(function () {
   modalButton.on("click", openModal);
   closeModalButton.on("click", closeModal);
 
+  //Code for modal window
   function openModal() {
     var targetModal = $(this).attr("data-href");
 
@@ -55,5 +58,28 @@ $(document).ready(function () {
 
   $(document).on("keyup", function (e) {
     if (e.key == "Escape") closeModal();
+  });
+
+  //Code for form validation
+
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: {
+          required: "Name is required",
+          minlength: "At least 3 characters",
+        },
+        email: {
+          required: "Email is required",
+          email: "Email address format: name@domain.com",
+        },
+        phone: {
+          required: "Phone number is required",
+          phone: "Phone number format: +7(999)999-99-99",
+          minlength: "At least 11 characters",
+        },
+      },
+    });
   });
 });

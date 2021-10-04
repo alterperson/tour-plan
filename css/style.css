@@ -1141,11 +1141,9 @@ template {
   width: 350px;
   height: 55px;
   border-radius: 4px;
-  overflow: hidden;
 }
 
 .subscribe__input {
-  position: absolute;
   width: 100%;
   height: 100%;
   padding-left: 33px;
@@ -1155,6 +1153,10 @@ template {
   line-height: 18px;
   color: #bdbdbd;
   border: none;
+}
+
+.subscribe__input.invalid {
+  color: red;
 }
 
 .subscribe__button {
@@ -1553,6 +1555,10 @@ template {
 
 .footer__input {
   width: 100%;
+}
+
+.footer__input-group {
+  width: 100%;
   max-width: 255px;
   margin-bottom: 15px;
 }
@@ -1696,19 +1702,19 @@ template {
 
 .modal__input {
   width: 100%;
-  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .modal__message {
   width: 100%;
   min-height: 123px;
-  margin-bottom: 18px;
+  margin-top: 18px;
 }
 
 .modal__button {
   min-width: 160px;
   min-height: 50px;
-  margin-top: -3px;
+  margin-top: 12px;
   margin-right: 41px;
 }
 
@@ -1717,6 +1723,13 @@ template {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+}
+
+label.invalid {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  color: #ec1f46;
 }
 
 @media (max-width: 1280px) {
@@ -1741,6 +1754,9 @@ template {
   }
   .footer__input {
     max-width: 100%;
+  }
+  .footer__input-group {
+    max-width: 220px;
   }
 }
 
@@ -1910,8 +1926,8 @@ template {
   .footer__form {
     max-width: 538px;
   }
-  .footer__input {
-    max-width: 255px;
+  .footer__input-group {
+    max-width: 254px;
   }
   .footer__info {
     grid-column: span 12;
@@ -2086,6 +2102,9 @@ template {
             flex-direction: column;
     min-height: 450px;
   }
+  .hotel__slider {
+    margin-left: 0;
+  }
   .booking {
     width: 100%;
   }
@@ -2169,6 +2188,12 @@ template {
   }
   .item__price--popular {
     margin-top: 0;
+  }
+  .footer__form {
+    max-width: none;
+  }
+  .footer__input-group {
+    max-width: none;
   }
 }
 

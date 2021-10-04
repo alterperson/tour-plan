@@ -20,6 +20,8 @@
   .footer
     &__input
       max-width: 100%
+      &-group
+        max-width: 220px
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -139,7 +141,8 @@
     &__form
       max-width: 538px
     &__input
-      max-width: 255px
+      &-group
+        max-width: 254px
     &__info
       grid-column: span 12
       justify-content: flex-start
@@ -255,6 +258,8 @@
     &-right
       flex-direction: column
       min-height: 450px
+    &__slider
+      margin-left: 0
   .booking
     width: 100%
   .map
@@ -313,6 +318,12 @@
     &__price
       &--popular
         margin-top: 0
+  .footer
+    &__form
+      max-width: none
+    &__input
+      &-group
+        max-width: none
 @media (max-width: 576px)
   .container, .newsletter-wrapper
     max-width: 280px
