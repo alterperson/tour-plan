@@ -679,7 +679,7 @@
               </div>
               <!-- /.footer__input-group -->
               <div class="footer__input-group">
-                <input type="tel" class="input footer__input" placeholder="Phone Number*" name="phone" required />
+                <input type="tel" class="input footer__input phone" placeholder="Phone Number*" name="phone" required />
               </div>
               <!-- /.footer__input-group -->
               <textarea cols="30" rows="10" class="message footer__message" placeholder="Message" name="message"></textarea>
@@ -714,10 +714,10 @@
         <button class="modal__close">
           <img src="images/close.svg" alt="icon: close" />
         </button>
-        <h2 class="modal__title modal__title--mb-3 contact-form__title">Booking</h2>
+        <h2 class="modal__title modal__title--mb-3">Booking</h2>
         <form action="send.php" method="POST" class="modal__form form">
           <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="4" />
-          <input type="tel" class="input modal__input" placeholder="Phone Number*" name="phone" required />
+          <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="phone" required />
           <input type="email" class="input modal__input" placeholder="Email*" name="email" required />
           <textarea cols="30" rows="5" class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button">Send</button>
@@ -730,6 +730,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

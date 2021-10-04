@@ -83,3 +83,5 @@ $(document).ready(function () {
     });
   });
 });
+
+$(".phone").mask("+0 (000) 000-0000");
