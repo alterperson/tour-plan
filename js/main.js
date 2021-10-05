@@ -88,3 +88,5 @@ $(document).ready(function () {
 $(".phone").each(function () {
   $(this).mask("+0 (000) 000-0000");
 });
+
+AOS.init();

@@ -9,18 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="navbar navbar--mobile">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo navbar__logo">
+          <a href="#" class="logo navbar__logo" data-aos="fade-right" data-aos-duration="1000">
             <img src="images/horizontal-logo.svg" alt="Logo: Best Tour Plan" class="logo__image" />
           </a>
           <!-- /.logo -->
 
-          <form action="#" class="search navbar__search navbar__search--mobile-hidden">
+          <form action="#" class="search navbar__search navbar__search--mobile-hidden" data-aos="fade-down" data-aos-duration="1500">
             <input type="text" class="search__input" placeholder="Search Location" />
             <button class="search__button">
               <img src="images/search.svg" alt="Icon: search" />
@@ -28,7 +29,7 @@
           </form>
           <!-- /.search -->
 
-          <a href="#" class="user navbar__user navbar__user--mobile-hidden">
+          <a href="#" class="user navbar__user navbar__user--mobile-hidden" data-aos="fade-left" data-aos-duration="1000">
             <img src="images/user-avatar.jpg" alt="Avatar: Nathan" class="user__avatar" />
             <span class="user__name">Nathan</span>
           </a>
@@ -135,7 +136,7 @@
         <!-- /.hotel-info -->
         <div class="hotel-grid">
           <!-- Slider main container -->
-          <div class="swiper-container hotel-slider hotel__slider">
+          <div class="swiper-container hotel-slider hotel__slider" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
@@ -161,7 +162,7 @@
             <button class="hotel-slider__button hotel-slider__button--next"></button>
           </div>
           <!-- /.swiper-container -->
-          <div class="hotel-right">
+          <div class="hotel-right" data-aos="fade-left" data-aos-delay="500" data-aos-duration="1000">
             <div class="booking">
               <div class="booking__info">
                 <div class="booking__price">
@@ -214,7 +215,7 @@
       <div class="container">
         <h2 class="packages__title">Other Packages</h2>
         <div class="packages-list">
-          <div class="packages__item packages__item--popular item">
+          <div class="packages__item packages__item--popular item" data-aos="fade-right" data-aos-duration="1000">
             <div class="item__picture item__picture--popular">
               <span class="offer item__offer item__offer--popular">Flash Offer</span>
               <img src="images/hotel-blue-haven.jpg" alt="Photo: Hotel Blue Haven" class="item__image" />
@@ -260,7 +261,7 @@
           </div>
           <!--/.packages__item-->
 
-          <div class="packages__item item">
+          <div class="packages__item item" data-aos="fade-left" data-aos-duration="1000">
             <div class="item__picture item__picture">
               <span class="offer item__offer">Flash Offer</span>
               <img src="images/lux-belle-mare.jpg" alt="Photo: LUX* Belle Mare" class="item__image" />
@@ -295,7 +296,7 @@
           </div>
           <!--/.packages__item-->
 
-          <div class="packages__item item">
+          <div class="packages__item item" data-aos="fade-up" data-aos-duration="1000">
             <div class="item__picture item__picture">
               <span class="offer item__offer">Flash Offer</span>
               <img src="images/white-palace.jpg" alt="Photo: White Palace" class="item__image" />
@@ -330,7 +331,7 @@
           </div>
           <!--/.packages__item-->
 
-          <div class="packages__item item">
+          <div class="packages__item item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <div class="item__picture item__picture">
               <span class="offer item__offer">Flash Offer</span>
               <img src="images/luxury-place.jpg" alt="Photo: Luxury Place" class="item__image" />
@@ -365,7 +366,7 @@
           </div>
           <!--/.packages__item-->
 
-          <div class="packages__item item">
+          <div class="packages__item item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <div class="item__picture item__picture">
               <span class="offer item__offer">Flash Offer</span>
               <img src="images/hotel-five-star.jpg" alt="Photo: Hotel Five Star" class="item__image" />
@@ -406,11 +407,11 @@
     </section>
     <section class="newsletter parallax-window" data-parallax="scroll" data-image-src="images/newsletter-bg.jpg" data-speed="0.7">
       <div class="newsletter-wrapper">
-        <h2 class="newsletter-title newsletter__title">
+        <h2 class="newsletter-title newsletter__title" data-aos="fade-right" data-aos-duration="1000">
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form action="send.php" method="POST" class="subscribe newsletter__subscribe form">
+        <form action="send.php" method="POST" class="subscribe newsletter__subscribe form" data-aos="fade-left" data-aos-duration="1000">
           <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required />
           <button class="subscribe__button">Send</button>
         </form>
@@ -421,7 +422,7 @@
     <section class="reviews">
       <div class="container">
         <h2 class="reviews__title">What people think about us</h2>
-        <div class="swiper-container reviews-slider">
+        <div class="swiper-container reviews-slider" data-aos="fade-up" data-aos-duration="1000">
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
@@ -514,25 +515,25 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="fade-up" data-aos-duration="1000">
             <img src="images/activity-1.jpg" alt="The curious corner of chamarel" class="card__image" />
             <h3 class="card__title">The curious corner of&nbsp;chamarel</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <img src="images/activity-2.jpg" alt="Gymkhana club golf course" class="card__image" />
             <h3 class="card__title">Gymkhana club golf course</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <img src="images/activity-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image" />
             <h3 class="card__title">Tamarind falls hiking trip&nbsp;-&nbsp;full day</h3>
             <button class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
-          <div class="card activities__card">
+          <div class="card activities__card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <img src="images/activity-4.jpg" alt="The blue marine discovery quest" class="card__image" />
             <h3 class="card__title">The blue marine discovery quest</h3>
             <button class="card__button">Book Now</button>
@@ -737,6 +738,7 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
