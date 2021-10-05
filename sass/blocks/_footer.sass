@@ -80,7 +80,11 @@
     color: $footer-text-color
   &__input
     width: 100%
+    & + .invalid
+      bottom: -15px
+      padding: 1px 10px 5px 10px
     &-group
+      position: relative
       width: 100%
       max-width: 255px
       margin-bottom: 15px

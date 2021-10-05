@@ -54,6 +54,7 @@ $(document).ready(function () {
 
     modalOverlay.removeClass("modal__overlay--visible");
     modalDialog.removeClass("modal__dialog--visible");
+    $("label.invalid").remove();
   }
 
   $(document).on("keyup", function (e) {
@@ -68,20 +69,22 @@ $(document).ready(function () {
       messages: {
         name: {
           required: "Name is required",
-          minlength: "At least 3 characters",
+          minlength: "At least 2 characters",
         },
         email: {
           required: "Email is required",
-          email: "Email address format: name@domain.com",
+          email: "Format: name@domain.com",
         },
         phone: {
-          required: "Phone number is required",
-          phone: "Phone number format: +7(999)999-99-99",
-          minlength: "At least 11 characters",
+          required: "Phone is required",
+          phone: "Format: +7(999)999-99-99",
+          minlength: "Enter the full number",
         },
       },
     });
   });
 });
 
-$(".phone").mask("+0 (000) 000-0000");
+$(".phone").each(function () {
+  $(this).mask("+0 (000) 000-0000");
+});

@@ -45,8 +45,9 @@
     line-height: 18px
     color: #bdbdbd
     border: none
-    &.invalid
-      color: red
+    border-radius: 4px
+    &+ .invalid
+      bottom: -21px
   &__button
     position: absolute
     top: 0
@@ -60,4 +61,5 @@
     color: $light
     background-color: $primary
     border: none
+    border-radius: 0 4px 4px 0
     cursor: pointer

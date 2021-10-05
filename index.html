@@ -675,11 +675,11 @@
             <h3 class="footer__title footer__title--mb-3 contact-form__title">Send us a message</h3>
             <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__input-group">
-                <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required />
+                <input type="text" class="input footer__input" placeholder="Your Full Name*" name="name" required minlength="2" maxlength="20" />
               </div>
               <!-- /.footer__input-group -->
               <div class="footer__input-group">
-                <input type="tel" class="input footer__input phone" placeholder="Phone Number*" name="phone" required />
+                <input type="tel" class="input footer__input phone" placeholder="Phone Number*" name="phone" required minlength="11" maxlength="11" />
               </div>
               <!-- /.footer__input-group -->
               <textarea cols="30" rows="10" class="message footer__message" placeholder="Message" name="message"></textarea>
@@ -716,9 +716,15 @@
         </button>
         <h2 class="modal__title modal__title--mb-3">Booking</h2>
         <form action="send.php" method="POST" class="modal__form form">
-          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="4" />
-          <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="phone" required />
-          <input type="email" class="input modal__input" placeholder="Email*" name="email" required />
+          <div class="modal__input-wrapper">
+            <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name" required minlength="2" maxlength="20" />
+          </div>
+          <div class="modal__input-wrapper">
+            <input type="tel" class="input modal__input phone" placeholder="Phone Number*" name="phone" required minlength="11" maxlength="11" />
+          </div>
+          <div class="modal__input-wrapper">
+            <input type="email" class="input modal__input" placeholder="Email*" name="email" required />
+          </div>
           <textarea cols="30" rows="5" class="message modal__message" placeholder="Message" name="message"></textarea>
           <button class="button modal__button">Send</button>
           <span class="modal__require">* Required Fields</span>
