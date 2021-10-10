@@ -28,6 +28,8 @@
   .navbar
     &-top
       padding: 30px 0
+    &__logo
+      margin-top: -2px
     &__search
       margin-left: 48px
     &-menu
@@ -71,6 +73,7 @@
     &-slider
       &__item
         max-width: 580px
+        height: 300px
         padding: 0 60px 30px 66px
         &:before, &::after
           display: none
@@ -89,7 +92,7 @@
     &-wrapper
       flex-wrap: wrap
     &__card
-      margin-bottom: 20px
+      margin-bottom: 19px
   .card
     width: 339px
     height: 255px
@@ -101,7 +104,7 @@
       &--popular
         padding: 35px 19px 0px 20px
   .footer
-    padding: 72px 0 46px 0
+    padding: 72px 0 31px 0
     &-wrapper
       grid-template-columns: repeat(12, 1fr)
       row-gap: 30px
@@ -119,15 +122,15 @@
     &__categories
       grid-row: 2 / 3
       grid-column: span 3
-      margin-top: 20px
+      margin-top: 18px
     &__additional
       grid-column: span 5
       margin-left: 21px
-      margin-top: 20px
+      margin-top: 18px
     &__legal
       grid-column: span 4
       margin-right: 11px
-      margin-top: 20px
+      margin-top: 18px
     &__contact
       &-details
         grid-column: span 10
@@ -137,7 +140,22 @@
         grid-column: span 12
         grid-row: 4
         margin-left: 1px
-        margin-top: 11px
+        margin-top: 10px
+    &__icon
+      &-wrapper
+        padding-left: 38px
+        &.map-marker
+          background-image: url(../images/map-marker.svg)
+          background-repeat: no-repeat
+          background-position: left 2px top 5px
+        &.contact-phone-call
+          background-image: url(../images/contact-phone-call.svg)
+          background-repeat: no-repeat
+          background-position: left -1px top 7px
+        &.email
+          background-image: url(../images/email.svg)
+          background-repeat: no-repeat
+          background-position: left 0px top 7px
     &__form
       max-width: 538px
     &__input
@@ -146,7 +164,7 @@
     &__info
       grid-column: span 12
       justify-content: flex-start
-      padding-top: 27px
+      margin-top: 27px
     &-info
       &__list
         padding: 0
@@ -176,6 +194,16 @@
     &-top
       &__menu-button
         display: flex
+        justify-content: space-between
+        align-items: center
+        flex-direction: column
+        width: 16px
+        height: 11px
+        padding: 0
+        background-color: #ffffff
+        border: none
+        outline: none
+        cursor: pointer
     &--mobile
       position: fixed
       left: 0
@@ -203,6 +231,8 @@
       padding-top: 13px
       &--active
         display: block
+        overflow: auto
+        overflow-x: hidden
       &__list
         flex-direction: column
       &__item
@@ -222,16 +252,6 @@
         margin-top: 10px
         color: $light
   .menu-button
-    display: flex
-    justify-content: space-between
-    align-items: center
-    flex-direction: column
-    width: 16px
-    height: 11px
-    padding: 0
-    background-color: #ffffff
-    border: none
-    cursor: pointer
     &__line
       width: 16px
       height: 1px
@@ -264,16 +284,20 @@
     width: 100%
   .map
     width: 100%
-  .newsletter-wrapper
-    flex-direction: column
-    align-items: flex-start
-    max-width: 576px
+  .newsletter
+    &-wrapper
+      flex-direction: column
+      align-items: center
+      max-width: 576px
   .reviews
     &-slider
       &__item
+        height: 441px
         padding: 0 30px 30px
         &:after, &:before
           display: none
+      &__profile
+        margin-bottom: 26px
       &__button
         top: 30px
         &--prev
@@ -318,16 +342,34 @@
     &__price
       &--popular
         margin-top: 0
+  .activities
+    &__card
+      margin-bottom: 20px
+      padding: 24px 25px
+      &:nth-child(3)
+        order: 1
+        margin-bottom: 28px
+      &:nth-child(2)
+        order: 2
+      &:nth-child(4)
+        order: 3
   .footer
     &__form
       max-width: none
     &__input
       &-group
         max-width: none
+  .modal
+    &__dialog
+      transform: translate(-50%, -50%)
+      overflow: auto
+      overflow-x: hidden
 @media (max-width: 576px)
   .container, .newsletter-wrapper
     max-width: 280px
   .navbar
+    &__logo
+      margin-top: 0
     &-top
       padding-top: 23px
       padding-bottom: 30px
@@ -362,6 +404,8 @@
     height: 173px
   .newsletter
     padding: 59px 0 83px 0
+    &-wrapper
+      align-items: flex-start
     &-title
       font-size: 20px
       line-height: 25px
@@ -376,7 +420,7 @@
     &__input
       padding-left: 20px
   .reviews
-    padding: 40px 0 70px 0
+    padding: 39px 0 70px 0
     &__title
       max-width: 250px
       margin: auto
@@ -384,10 +428,7 @@
       font-size: 18px
       line-height: 24px
   .activities
-    padding: 7px 0 39px 0
-    &__card
-      &:nth-child(2)
-        margin-bottom: 28px
+    padding: 0 0 40px 0
     &__title
       margin-bottom: 32px
       font-size: 18px
@@ -402,23 +443,25 @@
     &__book
       width: 100%
   .footer
-    padding: 68px 0 46px 0
+    padding: 68px 0 21px 0
     &-wrapper
       grid-template-columns: 1fr
-      row-gap: 20px
+      row-gap: 19px
     &__logo
       grid-column: 1
       grid-row: 1
       width: 96px
     &__ul
-      margin-left: 1px
+      margin-left: 0
     &__social
       &-network
         grid-column: 1
         grid-row: 2
         flex-wrap: wrap
-        margin: 22px 0 0 0
+        margin: 19px 0 0 0
     &__title
+      &--mb-3
+        margin-bottom: 25px
       &--inline
         width: 100%
         margin: 0 0 22px 0
@@ -426,7 +469,7 @@
       grid-column: 1
       grid-row: 3
       justify-self: self-start
-      margin-top: 7px
+      margin-top: 8px
     &__additional
       grid-column: 1
       grid-row: 4
@@ -435,7 +478,7 @@
     &__categories
       grid-column: 1
       grid-row: 5
-      margin-top: 7px
+      margin-top: 9px
     &__contact
       &-details
         grid-column: 1
@@ -446,9 +489,14 @@
         grid-row: 7
         margin-left: 0px
         margin-top: 22px
+    &__text
+      margin-bottom: 19px
     &__icon
       &-wrapper
-        min-width: 29px
+        padding-left: 30px
+    &__item
+      &-link
+        display: inline-block
     &__info
       grid-column: 1
       grid-row: 8
@@ -466,7 +514,7 @@
     &__button
       order: 2
     &__info
-      padding-top: 6px
+      margin-top: 7px
     &-info
       &__list
         margin-bottom: 10px
@@ -477,7 +525,7 @@
   .contact
     &-form
       &__title
-        margin-bottom: 14px
+        margin-bottom: 16px
   .pay-systems
     margin-left: 0
     margin-right: auto
@@ -490,3 +538,105 @@
     &__button
       width: 100%
       margin-right: 0
+@media (orientation: landscape) and (max-height: 540px)
+  .modal
+    &__dialog
+      height: 90vh
+
+@media (min-width: 992px)
+  .search
+    &__button
+      transition: 0.2s ease-out
+      transition-property: background-color
+      &:hover
+        background-color: $hover-primary
+  .user
+    transition: 0.2s ease-out
+    transition-property: color
+    &:hover
+      color: $hover-primary
+  .navbar
+    &-menu
+      &__link
+        transition: 0.2s ease-out
+        transition-property: color
+        &:hover
+          color: $hover-primary
+  .breadcrumb
+    &-list
+      &__link
+        transition: 0.2s ease-out
+        transition-property: color
+        &:hover
+          color: $hover-primary
+  .booking
+    &__button
+      transition: 0.2s ease-out
+      transition-property: background-color
+      &:hover
+        background-color: $hover-primary
+  .item
+    &__book
+      transition: 0.2s ease-out
+      transition-property: background-color
+      &:hover
+        background-color: $hover-primary
+  .subscribe
+    &__button
+      transition: 0.2s ease-out
+      transition-property: background-color
+      &:hover
+        background-color: $hover-primary
+  .card
+    &__button
+      transition: 0.2s ease-out
+      transition-property: background-color
+      &:hover
+        background-color: $hover-primary
+  .footer
+    &__button
+      transition: 0.2s ease-out
+      transition-property: background-color
+      &:hover
+        background-color: $hover-primary
+  .thankyou
+    &-button
+      transition: 0.2s ease-out
+      transition-property: background-color
+      &:hover
+        background-color: $hover-primary
+  .footer
+    &__link
+      transition: 0.2s ease-out
+      transition-property: color
+      &:hover
+        color: $light
+  .footer
+    &__item
+      &-link
+        transition: 0.2s ease-out
+        transition-property: color
+        &:hover
+          color: $light
+  .footer
+    &-info
+      &__link
+        transition: 0.2s ease-out
+        transition-property: color
+        &:hover
+          color: $footer-text-color
+  .social
+    &-links
+      &__link
+        transition: 0.2s ease-out
+        transition-property: fill
+        &:hover
+          path
+            fill: $light
+  .footer
+    &-info
+      &__link
+        transition: 0.2s ease-out
+        transition-property: color
+        &:hover
+          color: $footer-text-color
